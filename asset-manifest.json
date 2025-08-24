@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cambodia-doc-system/static/css/main.bae80690.css",
-    "main.js": "/cambodia-doc-system/static/js/main.d5e13c94.js",
+    "main.css": "/cambodia-doc-system/static/css/main.4abb1f68.css",
+    "main.js": "/cambodia-doc-system/static/js/main.5a4a4c1b.js",
     "index.html": "/cambodia-doc-system/index.html",
-    "main.bae80690.css.map": "/cambodia-doc-system/static/css/main.bae80690.css.map",
-    "main.d5e13c94.js.map": "/cambodia-doc-system/static/js/main.d5e13c94.js.map"
+    "main.4abb1f68.css.map": "/cambodia-doc-system/static/css/main.4abb1f68.css.map",
+    "main.5a4a4c1b.js.map": "/cambodia-doc-system/static/js/main.5a4a4c1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.bae80690.css",
-    "static/js/main.d5e13c94.js"
+    "static/css/main.4abb1f68.css",
+    "static/js/main.5a4a4c1b.js"
   ]
 }
