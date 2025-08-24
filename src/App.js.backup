@@ -1,0 +1,32 @@
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <h1>✅ HashRouter 测试页面</h1>
+        <p>如果看到这个文字，说明路由基本配置成功</p>
+        
+        <Routes>
+          <Route path="/" element={
+            <div>
+              <h2>🏠 主页内容</h2>
+              <p>这是通过路由显示的主页内容</p>
+            </div>
+          } />
+          
+          <Route path="/about" element={
+            <div>
+              <h2>📋 关于页面</h2>
+              <p>这是关于页面的内容</p>
+            </div>
+          } />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
