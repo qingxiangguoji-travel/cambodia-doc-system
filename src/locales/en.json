@@ -1,7 +1,31 @@
-{
-  "welcome": "Welcome to Document Management System",
-  "login": "Login",
-  "dashboard": "Dashboard",
-  "customers": "Customers",
-  "documents": "Documents"
+﻿{
+  "header": {
+    "title": "Cambodia Document Management System",
+    "welcome": "Welcome to the system"
+  },
+  "navigation": {
+    "home": "Home",
+    "documents": "Documents",
+    "customers": "Customers", 
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "common": {
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete", 
+    "save": "Save",
+    "cancel": "Cancel",
+    "search": "Search",
+    "loading": "Loading...",
+    "confirmDelete": "Confirm deletion?"
+  },
+  "home": {
+    "dashboard": "Dashboard",
+    "totalCustomers": "Total Customers",
+    "pendingDocuments": "Pending Documents",
+    "completedThisMonth": "Completed This Month",
+    "systemOverview": "System Overview", 
+    "developmentProgress": "System Development Progress"
+  }
 }

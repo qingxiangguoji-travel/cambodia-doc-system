@@ -1,39 +1,78 @@
 ﻿import React from "react";
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Layout, ConfigProvider } from "antd";
+import zhCN from "antd/locale/zh_CN";
+import enUS from "antd/locale/en_US";
+import kmKH from "antd/locale/km_KH";
+import { useTranslation } from "react-i18next";
+import "./i18n";
 import "./App.css";
 
-const Home = () => (
-  <div>
-    <h1>🏠 主页</h1>
-    <p>这是主页内容 - 如果看到这个，说明路由工作正常</p>
-    <Link to="/about">前往关于页面</Link>
-  </div>
-);
+import Header from "./components/Layout/Header";
+import Sidebar from "./components/Layout/Sidebar";
+import Home from "./pages/Home";
 
-const About = () => (
-  <div>
-    <h1>📋 关于页面</h1>
-    <p>这是关于页面内容</p>
-    <Link to="/">返回主页</Link>
-  </div>
-);
+const { Content } = Layout;
+
+// Antd 多语言配置
+const antdLocales = {
+  zh: zhCN,
+  en: enUS,
+  km: kmKH
+};
 
 function App() {
+  const { i18n } = useTranslation();
+
   return (
-    <Router>
-      <div className="App">
-        <nav style={{ padding: '10px', background: '#f0f0f0' }}>
-          <strong>导航: </strong>
-          <Link to="/" style={{ marginRight: '10px' }}>首页</Link>
-          <Link to="/about">关于</Link>
-        </nav>
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-    </Router>
+    <ConfigProvider locale={antdLocales[i18n.language] || zhCN}>
+      <Router>
+        <Layout style={{ minHeight: "100vh" }}>
+          <Header />
+          <Layout>
+            <Sidebar />
+            <Layout style={{ padding: "24px" }}>
+              <Content style={{
+                background: "#fff",
+                padding: "24px",
+                margin: 0,
+                minHeight: 280,
+                borderRadius: "8px",
+                boxShadow: "0 1px 4px rgba(0,0,0,0.1)"
+              }}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/documents" element={
+                    <div>
+                      <h2>证件管理</h2>
+                      <p>证件管理页面开发中...</p>
+                    </div>
+                  } />
+                  <Route path="/customers" element={
+                    <div>
+                      <h2>客户管理</h2>
+                      <p>客户管理页面开发中...</p>
+                    </div>
+                  } />
+                  <Route path="/reports" element={
+                    <div>
+                      <h2>报表统计</h2>
+                      <p>报表统计页面开发中...</p>
+                    </div>
+                  } />
+                  <Route path="/settings" element={
+                    <div>
+                      <h2>系统设置</h2>
+                      <p>系统设置页面开发中...</p>
+                    </div>
+                  } />
+                </Routes>
+              </Content>
+            </Layout>
+          </Layout>
+        </Layout>
+      </Router>
+    </ConfigProvider>
   );
 }
 

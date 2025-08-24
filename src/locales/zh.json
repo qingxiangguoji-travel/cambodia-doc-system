@@ -1,7 +1,31 @@
-{
-  "welcome": "欢迎使用证件管理系统",
-  "login": "登录",
-  "dashboard": "仪表板",
-  "customers": "客户管理",
-  "documents": "证件管理"
+﻿{
+  "header": {
+    "title": "柬埔寨证件业务管理系统",
+    "welcome": "欢迎使用系统"
+  },
+  "navigation": {
+    "home": "首页",
+    "documents": "证件管理", 
+    "customers": "客户管理",
+    "reports": "报表统计",
+    "settings": "系统设置"
+  },
+  "common": {
+    "add": "添加",
+    "edit": "编辑",
+    "delete": "删除",
+    "save": "保存",
+    "cancel": "取消",
+    "search": "搜索",
+    "loading": "加载中...",
+    "confirmDelete": "确认删除吗？"
+  },
+  "home": {
+    "dashboard": "仪表板",
+    "totalCustomers": "总客户数",
+    "pendingDocuments": "待处理证件",
+    "completedThisMonth": "本月完成",
+    "systemOverview": "系统概览",
+    "developmentProgress": "系统开发进度"
+  }
 }
